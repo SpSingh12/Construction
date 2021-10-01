@@ -1,0 +1,52 @@
+{% extends 'construct/base.html' %}
+
+{% block content %}
+<div id="project">
+    <div class="container txt">
+
+        <div class="row">
+            <div class="col-sm-12 text-center mt-4">
+                <h1> Projects</h1>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sunt. Aperiam, dignissimos.
+                    Itaque dolorum expedita numquam voluptatibus dicta nobis deserunt officia provident atque!
+                    Aliquid nam libero enim quis vel nihil!
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row mb-5 mt-5">
+            <h1 class="mt-5 mb-0">Residentials Properties</h1>
+            <div class="col-md-6">
+                <div class="card bg-dark text-white mt-5">
+                    <img src="https://i0.wp.com/www.arkitecture.org/wp-content/uploads/2018/09/house-exterior-modern-screen-house-oak-house-architecture-by-grid-architects-in-ahmedabad-india.jpg?fit=1028%2C685&ssl=1&resize=1280%2C720"
+                        class="card-img img-fluid" alt="">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center"
+                        style="margin-top: 180px;">
+
+                        <a href="{% url 'residential_1' %}" class="btn btn-primary" style="font-size: 25px;">Know
+                            More &#187;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card bg-dark text-white mt-5">
+                    <img src="https://i.pinimg.com/originals/02/17/e8/0217e8ba2cda0577e7a490566a47f49e.jpg"
+                        class="card-img img-fluid" alt="">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center"
+                        style="margin-top: 180px;">
+
+                        <a href="{% url 'residential_2' %}" class="btn btn-primary" style="font-size: 25px;">Know
+                            More &#187;</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

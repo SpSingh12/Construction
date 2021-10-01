@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Construction</title>
+    <link rel="shortcut icon"
+        href="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbnN0cnVjdGlvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <style>
+        #nav {
+            font-size: 35px;
+        }
+
+        #li {
+            margin-left: auto;
+            font-size: 21px;
+        }
+
+        .fa {
+            margin-right: 15px;
+        }
+
+        #id_geander,
+        #id_city {
+            list-style: none;
+            display: inline-flex;
+        }
+
+        #id_geander,
+        li {
+            padding-left: 10px;
+        }
+
+        #id_city,
+        li {
+            padding: 10px;
+        }
+
+
+        /* dropdwon menu */
+        .dropbtn {
+            color: rgba(255, 255, 255, .55);
+            text-decoration: none;
+
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            text-decoration: none;
+            color: rgb(224, 218, 218);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar section  -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#010155">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#" id="nav"><i class="fa fa-anchor" aria-hidden="true"></i>Construction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="li">
+                    <li class="nav-item ">
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+
+
+                    <div class="dropdown " style="margin-top: 19px;">
+                        <a class="dropbtn">Our Projects</a>
+                        <div class="dropdown-content" style="background-color: #010155;">
+                            <a style="font-size: 18px;color: white;" href="{% url 'project' %}">Commercial</a>
+                            </a>
+                            <a style="font-size: 18px;color: white;" href="{% url 'residential' %}">Residential</a>
+                            <a style="font-size: 18px;color: white;" href="{% url 'all_projects' %}">All Projects</a>
+                        </div>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{% url 'services' %}">Services</a>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

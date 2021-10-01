@@ -1,0 +1,89 @@
+<style>
+  a {
+    color: white;
+    font-size: 25px;
+  }
+
+  #foo {
+    background-color: #010155;
+
+  }
+
+
+   /* page color transformation */
+   .btng {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #aqua {
+            background-color: rgb(0, 255, 255);
+        }
+
+        #violet {
+            background-color: violet;
+        }
+
+        #black {
+            background-color: black;
+        }
+
+        #color-switcher {
+            text-align: right;
+        }
+
+</style>
+<div id="foo">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 text-center p-3">
+        <a href="#" style="font-size: 25px;"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="col-md-6 pt-3 ml-5">
+        <div class=" offset-sm-3">
+          <a href="#" style="text-decoration: none;font-size: 20px;color: white;"> Suryapratapsingh3802@gmaiil.com</a>
+        </div>
+
+        <div id="color-switcher">
+          <span class="btng" id="white" onclick="changeBG('#ffffff')"></span>
+          <span class="btng" id="black" onclick="changeBG('#000000')"></span>
+          <span class="btng" id="violet" onclick="changeBG('#ff99ff')"></span>
+          <span class="btng" id="aqua" onclick="changeBG('rgb(0, 255, 255)')"></span>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function changeBG(color) {
+      document.body.style.backgroundColor = color;
+      let txt = document.getElementsByClassName("txt");
+      if (color == '#000000') {
+          for(let elem of txt){
+              elem.style.color = 'white';
+          }
+      }
+      else{
+          for(let elem of txt){
+              elem.style.color = 'black';
+          }
+      }
+
+  }
+</script>

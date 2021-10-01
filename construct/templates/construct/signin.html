@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'construct/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block content %}
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+<div class="container jumbotron text-center text-justify mb-5 mt-5 txt">
+    <form method="POST" class="shadow p-5">
+        {% csrf_token %}
+        {% for fmm in formss %}
+       
+        <div class="form-group mb-4">
+            {{fmm.label_tag}} {{fmm}}
+        </div>
+        {% endfor %}
+        <input type="submit" class="btn btn-success">
+       
+       </form>
+</div>
+ {% endblock %}

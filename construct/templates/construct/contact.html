@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% extends 'construct/base.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% block content %}
+</head>
+
+<body>
+    <div class="container mt-5 txt">
+        <div class="row mx-auto">
+            <div class="col-md-6 ">
+                <form method="POST" class="shadow p-5 ">
+                    {% csrf_token %}
+                    {% for fm in myform %}
+
+                    <div class="form-group mb-4">
+                        {{fm.label_tag}} {{fm}}
+                    </div>
+
+                    {% endfor %}
+
+                    <input type="submit">
+                </form>
+              
+
+            </div>
+
+
+            <div class="col-md-5  mt-sm-5 offset-md-1" style="background-color:rgb(89, 89, 211); color: white;"
+            id="display">
+            <h3>contact us</h3>
+            <p>
+                <i class="fa fa-map-marker fa-2x" style="margin-right: 75px; color: rgb(98, 201, 98);"
+                    aria-hidden="true"></i> <span style="font-size: 20px;text-transform: uppercase;">address
+                    :</span>
+                198 west 21th <br>
+                street, sluite 721 new york ny<br>
+                10016
+            </p>
+
+            <p>
+                </i> <i class="fa fa-volume-control-phone fa-2x" style="margin-right: 70px; color: rgb(24, 24, 24);"
+                    aria-hidden="true"></i> <span style="font-size: 20px;text-transform: uppercase;">phone :</span>
+                + 1234 5678 90
+            </p>
+
+            <p>
+                <i class="fa fa-paper-plane fa-2x" style="margin-right: 75px;color: rgb(0, 0, 255);"
+                    aria-hidden="true"></i> <span style="font-size: 20px;text-transform: uppercase;">email :</span>
+                SuryaPratapSingh@gmail.com
+            </p>
+
+            <p>
+                <i class="fa fa-globe fa-2x mr-sm-4 text-danger" aria-hidden="true"></i> <span
+                    style="font-size: 20px;text-transform: uppercase;">websites:</span>
+               Cnstruction@gmail.com
+            </p>
+
+            <button type="button" class="btn btn-success mb-5" onclick="window.print()">PRINT PAGE</button>
+        </div>
+        </div>
+    </div>
+
+
+  <div class="container text-center">
+    <a href="{% url 'Signin' %}" style="color: black;text-decoration: none;" class="btn btn-primary mb-5 mt-5">GO FOR LOGIN</a>
+  </div>
+</body>
+{% endblock %}
+
+</html>

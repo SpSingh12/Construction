@@ -1,0 +1,106 @@
+{% extends 'construct/base.html' %}
+
+{% block content %}
+<body style="background-color: rgb(236, 230, 230)">
+    <div id="project">
+        <div class="container txt">
+            <div class="row">
+                <div class="col-sm-12 text-center mt-4">
+                    <h1>Projects</h1>
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sunt. Aperiam, dignissimos.
+                        Itaque dolorum expedita numquam voluptatibus dicta nobis deserunt officia provident atque!
+                        Aliquid nam libero enim quis vel nihil!
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-5 mt-5">
+                <h1 class="mt-5 mb-0">Commercial Properties</h1>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white mt-5">
+                        <img src="https://www.tata.com/content/dam/tata/images/communityLanding/desktop/TMC_LeadImage_desktop_1920x1080.jpg"
+                            class="card-img img-fluid" alt="...">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center"
+                            style="margin-top: 180px;">
+
+                            <a href="{% url 'hospital' %}" class="btn btn-primary" style="font-size: 25px;">Know
+                                More &#187;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white mt-5">
+                        <img src="https://wallpaperaccess.com/full/4952568.jpg" class="card-img img-fluid" alt="">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center"
+                            style="margin-top: 180px;">
+
+                            <a href="{% url 'commercial_2' %}" class="btn btn-primary" style="font-size: 25px;">Know
+                                More &#187;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 txt">
+        <div class="row">
+            <div class="col-md-12 pt-5 mb-3 text-center">
+                <h3>Location</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7308185.298720034!2d69.37903824958181!3d26.56993613499302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396a3efaf7e30e37%3A0xb52b9b4506c088e5!2sRajasthan!5e0!3m2!1sen!2sin!4v1625620874086!5m2!1sen!2sin"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="project">
+        <div class="container txt">
+    
+            <div class="row mb-5 mt-5">
+                <h1 class="mt-5 mb-0">Residentials Properties</h1>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white mt-5">
+                        <img src="https://i0.wp.com/www.arkitecture.org/wp-content/uploads/2018/09/house-exterior-modern-screen-house-oak-house-architecture-by-grid-architects-in-ahmedabad-india.jpg?fit=1028%2C685&ssl=1&resize=1280%2C720"
+                            class="card-img img-fluid" alt="">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center"
+                            style="margin-top: 180px;">
+    
+                            <a href="{% url 'residential_1' %}" class="btn btn-primary" style="font-size: 25px;">Know
+                                More &#187;</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white mt-5">
+                        <img src="https://i.pinimg.com/originals/02/17/e8/0217e8ba2cda0577e7a490566a47f49e.jpg"
+                            class="card-img img-fluid" alt="">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center"
+                            style="margin-top: 180px;">
+    
+                            <a href="{% url 'residential_2' %}" class="btn btn-primary" style="font-size: 25px;">Know
+                                More &#187;</a>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+{% endblock %}

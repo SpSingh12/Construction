@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends 'construct/base.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% block content %}
+    {% csrf_token %}
+
+
+</head>
+
+<body>
+    <h1 class="text-center mt-4 txt">FORM SUBMISSION</h1>
+    <table class="table txt">
+        <thead>
+            <tr>
+                <th scope="col">I.D.</th>
+                <th scope="col">USER NAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">MOBILE-NO</th>
+                <th scope="col">PASSWORD</th>
+                <th scope="col">LOCATION</th>
+                <!-- <th scope="col">GENDER</th> -->
+               <th scope="col">CRUD</th>           
+            
+            </tr>
+        </thead>
+        <tbody class="txt">
+            {% for i in mydata %}
+            <tr>
+
+                <td>{{i.Empid}}</td>
+                <td>{{i.Empname}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Mobile}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.Location}}</td>
+           
+                <td><a href="{% url 'Delete' %}?email={{i.Email}}" style="color: black;font-weight: bolder;">delete</a></td>
+           
+            
+        
+             
+            </tr>
+           
+            {% endfor %}
+        </tbody>
+    </table>
+
+   <div class="container text-center mt-5 mb-5 txt">
+    <a href="{% url 'contact' %}" style="color:black;text-decoration: none;" class="btn btn-outline-danger">GO FOR REGISTRATION PAGE !   </a>
+   </div>
+</body>
+{% endblock %}
+
+</html>
