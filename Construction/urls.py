@@ -19,7 +19,7 @@ from construct.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',home,name='home'),
+    path('',home,name='home'),
     path('about/',about,name='about'),
     path('project/',project,name='project'),
     path('services/',services,name='services'),
